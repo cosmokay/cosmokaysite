@@ -68,6 +68,28 @@ function ResumePage() {
                         </ul>
                     </div>
                 </div>
+                <div class="container left">
+                    <div class="content">
+                        <h2 style={{margin: 0}}>Tropare</h2>
+                        <h3 style={{margin: 0}}>April 2019 - June 2019</h3>
+                        <ul>
+                            <li>Automated the process of scraping 1,000,000+ URLs and extracting US postal addresses.</li>
+                            <li>Developed MySQL exporter to convert from mysqldump format to proprietary.</li>
+                            <li>Back-end, high concurrency, heuristics.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container right">
+                    <div class="content">
+                        <h2 style={{margin: 0}}>Documobl</h2>
+                        <h3 style={{margin: 0}}>February 2019 - June 2019</h3>
+                        <ul>
+                            <li>Rapidly developed an Android application using Java and React Native to mirror an IOS version.</li>
+                            <li>Integrated peer to peer messaging using internal RESTful API and Twilio.</li>
+                            <li>Learned how to communicate effectively in a small development team.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     )
