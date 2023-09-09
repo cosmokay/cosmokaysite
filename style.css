@@ -11,9 +11,6 @@ body {
     margin: 0;
 }
 
-.light {
-    background: white;
-}
 
 #root {
     height: 100%;
@@ -24,6 +21,11 @@ body {
     display: flex; 
     flex: 8; 
     background: #0f0f0f;
+    color: white;
+}
+.light {
+    background: white;
+    color: black;
 }
 
 button {
@@ -42,6 +44,19 @@ button {
 button:hover {
   color: #4CAF50;
   box-shadow: 0 5px 15px #4CAF50;
+}
+
+.active {
+    color: #4CAF50;
+}
+
+.navigationButton {
+    margin: 10px;
+}
+
+.navigationButton:hover {
+    cursor: pointer;
+    color: #4CAF50;
 }
 
 .profilePicture {
