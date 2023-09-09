@@ -29,20 +29,19 @@ body {
 }
 
 button {
-  background-color: transparent; /* Green */
-  color: white;
-  padding: 7px 28px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 2px;
-  border: 2px solid #4CAF50;
-  cursor: pointer;
+    background-color: transparent; /* Green */
+    padding: 7px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 2px;
+    border: 2px solid #4CAF50;
+    cursor: pointer;
+    color: #4CAF50 !important;
 }
 
 button:hover {
-  color: #4CAF50;
   box-shadow: 0 5px 15px #4CAF50;
 }
 
@@ -51,7 +50,7 @@ button:hover {
 }
 
 .navigationButton {
-    margin: 10px;
+    margin: 20px;
 }
 
 .navigationButton:hover {
@@ -70,13 +69,14 @@ h1 {
   position: relative;
   font-size: 64px !important;
   color: hsl(0, 0%, 68%);
+  color: #4CAF50 ;
   font-weight: bold !important;
   letter-spacing: 7px! important;
   overflow: hidden;
   border-right: 2px solid hsl(0, 0%, 80%);
   white-space: nowrap;
     margin: 0;
-  animation: typewriter 2s steps(30) 1s 1 normal both,
+  animation: typewriter 2s steps(30) .3s 1 normal both,
     blinkTextCursor 750ms infinite;
 }
 
