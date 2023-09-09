@@ -1,0 +1,83 @@
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: "Anonymous Pro", monospace! important;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.light {
+    background: white;
+}
+
+#root {
+    height: 100%;
+    width: 100%;
+}
+
+.page {
+    display: flex; 
+    flex: 8; 
+    background: #0f0f0f;
+}
+
+button {
+  background-color: transparent; /* Green */
+  color: white;
+  padding: 7px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 2px;
+  border: 2px solid #4CAF50;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #4CAF50;
+  box-shadow: 0 5px 15px #4CAF50;
+}
+
+.profilePicture {
+    height: auto;
+    aspect-ratio: 1/1;
+    border: 4px solid #4CAF50;
+    border-radius: 50%;
+    margin: 10%;
+}
+h1 {
+  position: relative;
+  font-size: 64px !important;
+  color: hsl(0, 0%, 68%);
+  font-weight: bold !important;
+  letter-spacing: 7px! important;
+  overflow: hidden;
+  border-right: 2px solid hsl(0, 0%, 80%);
+  white-space: nowrap;
+    margin: 0;
+  animation: typewriter 2s steps(30) 1s 1 normal both,
+    blinkTextCursor 750ms infinite;
+}
+
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 320px;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: hsl(0, 0%, 80%);
+  }
+  to {
+    border-right-color: transparent;
+  }
