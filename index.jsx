@@ -26,6 +26,7 @@ function App() {
             <NavigationBar active={activePage} setActive={setActivePage} />
             {activePage === 'home' && <WelcomPage setActive={setActivePage} />}
             {activePage === 'about' && <AboutPage />}
+            {activePage === 'resume' && <ResumePage />}
         </div>
     )
 }
@@ -36,6 +37,40 @@ function Page({children, light}) {
             {children}
         </div>
     );
+}
+
+function ResumePage() {
+    return (
+        <div style={{flex: 8, background: '#0f0f0f', overflow: 'auto'}}>
+            <div class="timeline">
+                <div class="container left">
+                    <div class="content">
+                        <h2 style={{margin: 0}}>Vali Cyber</h2>
+                        <h3 style={{margin: 0}}>March 2021 - July 2023</h3>
+                        <ul>
+                            <li>Implemented a cybersecurity SaaS stack driven by a Node.js microservice deployment and MySQL that manages the operation of 1000s of endpoints.</li>
+                            <li>Created React based web GUI for endpoint reporting and configuration.</li>
+                            <li>Built Golang agent and corresponding web connector microservice.</li>
+                            <li>Implemented SOC2 compliant authentication and validation mechanisms.</li>
+                            <li> Developed and maintained internal build scripts (bash) for the team.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container right">
+                    <div class="content">
+                        <h2 style={{margin: 0}}>Big Picture Guide, LLC</h2>
+                        <h3 style={{margin: 0}}>November 2019 - March 2021</h3>
+                        <ul>
+                            <li>Developed a multifaceted streaming platform MVP and beta driven by Firebase’s NoSQL database.</li>
+                            <li>Implemented video and voice communication by integrating with a third-party cloud processing WebRTC service.</li>
+                            <li>Created a web app, a mobile app for both Android and iOS powered by React Native, and an Android TV application.</li>
+                            <li>Scraped and managed 10,000s of titles from various video providers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
 }
 
 function AboutPage() {
