@@ -25,7 +25,7 @@ function App() {
             <NavigationBar active={activePage} setActive={setActivePage} />
             {activePage === 'home' && <WelcomPage setActive={setActivePage} />}
             {activePage === 'about' && <AboutPage setActive={setActivePage} />}
-            {activePage === 'resume' && <ResumePage />}
+            {activePage === 'history' && <HistoryPage />}
             {activePage === 'projects' && <ProjectsPage />}
             <Copyright />
         </div>
@@ -48,7 +48,7 @@ function Page({children, light}) {
     );
 }
 
-function ResumePage() {
+function HistoryPage() {
     return (
         <div style={{flex: 8, background: '#0f0f0f', overflow: 'auto'}}>
             <div className="timeline">
@@ -169,9 +169,9 @@ function ProjectsPage({setActive}) {
                                 </div>
                             </div>
                             <div>
-                                webEdit is web based HTML/JavaScript IDE. 
+                                webEdit is a web based HTML/JavaScript IDE. 
                                 The inital idea spawned from difficulties my mentor ran into while tutoring programming students.
-                                We realized that the tools to help soften the learning curve between being an absoute beginner and having slightly more experience are not great. 
+                                We realized that the tools to help soften the learning curve in going from an absoute beginner to a novice are not great. 
                                 webEdit is our attempt to  provide a powerful, yet lightweight, tool that solves that problem.
                             </div>
                         </div>
@@ -263,7 +263,7 @@ function NavigationBar({active, setActive}) {
                 <div style={{flex: 1}}>
                     <NavigationButton page="home" {...props} />
                     <NavigationButton page="about" {...props} />
-                    <NavigationButton page="resume" {...props} />
+                    <NavigationButton page="history" {...props} />
                     <NavigationButton page="projects" {...props} />
                     <NavigationButton page="contact" {...props} />
                 </div>
