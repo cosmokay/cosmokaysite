@@ -158,8 +158,8 @@ function WebEditPage({setActive}) {
     return (
         <Page>
             <div style={{flex: 1, padding: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                <div className="title" style={{marginBottom: '10px', fontWeight: 'bold', fontSize: '64px'}}>
-                    webEdit.com
+                <div style={{marginBottom: '10px', fontWeight: 'bold', fontSize: '64px'}}>
+                    <img style={{height: '60px'}} src="/webEditLogoWhite.png" />
                     <div onClick={() => window.open('https://webedit.com')} style={{fontSize: '64px', display: 'inline-block', padding: '5px'}}>
                         <img className='weLink' src="pasted_CmHfqnm422.jpg" />
                     </div>
@@ -208,8 +208,8 @@ function WebEditPage({setActive}) {
                                 <div style={{display: 'flex', flex: 1, flexDirection: 'row', justifyContent: 'center', alignSelf: 'flex-start'}}>
                                     <div style={{padding: '10px', display: 'flex', flex: 1, flexDirection: 'column', justifyContent: 'center', alignSelf: 'flex-start'}}>
                                         Once logged in, you are met with a landing page that displays your most recently
-                                        edited projects and allows you to search your projects.
-                                        You can also create new projects. There are options for a blank html page, vanilla JavaScript, and ReactJS. 
+                                        edited projects and allows you to search through them.
+                                        You can create new projects from this page. There are options for a blank html page, vanilla JavaScript, and ReactJS. 
                                         And Python is coming soon!
                                     </div>
                                     <div className='screenshotContainer static'>

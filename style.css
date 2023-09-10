@@ -165,8 +165,8 @@ button:hover {
 
 .weLink {
     filter: invert(1);
-    vertical-align: bottom;
-    margin-bottom: 15px;
+    vertical-align: top;
+    margin-top: 14px;
     height: 24px;
 }
 
