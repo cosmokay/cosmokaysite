@@ -34,7 +34,7 @@ function App() {
 
 function Copyright() {
     return (
-        <div style={{position: 'fixed', color: 'grey', right: '10px', bottom: '5px', fontSize: '9px'}}>
+        <div style={{position: 'fixed', color: 'grey', right: '30px', bottom: '5px', fontSize: '9px'}}>
             Copyright 2023 Cosmo Kay
         </div>
     )
@@ -158,7 +158,7 @@ function WebEditPage({setActive}) {
     return (
         <Page>
             <div style={{flex: 1, padding: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                <div style={{marginBottom: '10px', fontWeight: 'bold', fontSize: '64px'}}>
+                <div style={{fontWeight: 'bold', fontSize: '64px'}}>
                     <img style={{height: '60px'}} src="/webEditLogoWhite.png" />
                     <div onClick={() => window.open('https://webedit.com')} style={{fontSize: '64px', display: 'inline-block', padding: '5px'}}>
                         <img className='weLink' src="pasted_CmHfqnm422.jpg" />
