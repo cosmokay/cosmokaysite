@@ -12,6 +12,12 @@ body {
 
 }
 
+.subtitle {
+    text-align: center;
+    font-size: 26px;
+    margin: 0px 20px 20px;
+}
+
 .hamMenu {
     visibility: hidden;
     position: absolute;
@@ -50,6 +56,9 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+    .subtitle {
+        text-align: right !important;
+    }
     .navigationBar {
         flex: 0;
     }

@@ -120,7 +120,7 @@ function AboutPage({setActive}) {
         <Page light>
             <div style={{padding: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                 <div className="title" style={{fontWeight: 'bold', fontSize: '64px'}}>About Me</div>
-                <h2 style={{textAlign: 'center', fontSize: '26px', margin: '0px 20px 20px 20px'}}>I'm Cosmo Kay, a web development enthousiast.</h2>
+                <h2 className="subtitle" style={{textAlign: 'center', fontSize: '26px', margin: '0px 20px 20px 20px'}}>I'm Cosmo Kay, a web development enthousiast.</h2>
                 <div style={{display: 'flex', flexDirection: 'row', flex: 1}}>
                     <div style={{display: 'flex', flex: 1.5, flexDirection: 'column', alignItems: 'center', justifyContent: 'space-evenly'}}>
                         <div style={{fontSize: '18px', lineHeight: '1.5', padding: '0px 5px 20px 20px'}}>
