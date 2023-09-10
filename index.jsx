@@ -11,7 +11,6 @@ function App() {
     };
  
     useEffect(() => {
-        console.log(window.location)
         const pathArr = window.location.pathname.split('/');
         setActivePage(pathArr[pathArr.length - 1] || "home");
         
@@ -43,10 +42,10 @@ function Page({children, light}) {
 function ResumePage() {
     return (
         <div style={{flex: 8, background: '#0f0f0f', overflow: 'auto'}}>
-            <div class="timeline">
-                <div class="resumeTitle">My History</div>
-                <div class="container left">
-                    <div class="content">
+            <div className="timeline">
+                <div className="resumeTitle">My History</div>
+                <div className="container left">
+                    <div className="content">
                         <h2 style={{margin: 0}}>Vali Cyber</h2>
                         <h3 style={{margin: 0}}>March 2021 - July 2023</h3>
                         <ul>
@@ -58,8 +57,8 @@ function ResumePage() {
                         </ul>
                     </div>
                 </div>
-                <div class="container right">
-                    <div class="content">
+                <div className="container right">
+                    <div className="content">
                         <h2 style={{margin: 0}}>Big Picture Guide, LLC</h2>
                         <h3 style={{margin: 0}}>November 2019 - March 2021</h3>
                         <ul>
@@ -70,8 +69,8 @@ function ResumePage() {
                         </ul>
                     </div>
                 </div>
-                <div class="container left">
-                    <div class="content">
+                <div className="container left">
+                    <div className="content">
                         <h2 style={{margin: 0}}>Tropare</h2>
                         <h3 style={{margin: 0}}>April 2019 - June 2019</h3>
                         <ul>
@@ -81,8 +80,8 @@ function ResumePage() {
                         </ul>
                     </div>
                 </div>
-                <div class="container right">
-                    <div class="content">
+                <div className="container right">
+                    <div className="content">
                         <h2 style={{margin: 0}}>Documobl</h2>
                         <h3 style={{margin: 0}}>February 2019 - June 2019</h3>
                         <ul>
@@ -162,7 +161,7 @@ function ProjectsPage({setActive}) {
                             </div>
                             <div>
                                 webEdit is web based HTML/JavaScript IDE. 
-                                The inital idea was spawned from difficulties my mentor ran into while tutoring programming students.
+                                The inital idea spawned from difficulties my mentor ran into while tutoring programming students.
                                 We realized that the tools to help soften the learning curve between being an absoute beginner and having slightly more experience are not great. 
                                 webEdit is our attempt to  provide a powerful, yet lightweight, tool that solves that problem.
                             </div>
