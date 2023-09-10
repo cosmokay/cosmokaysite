@@ -12,6 +12,62 @@ body {
 
 }
 
+.hamMenu {
+    visibility: hidden;
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    z-index: 2;
+}
+
+.ham {
+    width: 35px;
+    height: 5px;
+    background-color: #4CAF50;
+    margin: 6px 0;
+}
+
+.navigationBar {
+    width: 0;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    background: black;
+    color: white;
+    height: 100%;
+    flex: 2;
+    transition: .2s all; /* Animation */
+}
+
+@media screen and (max-width: 600px) {
+    .navigationBar {
+        flex: 0;
+    }
+    .navigationBar .open {
+        flex: 2;
+    }
+    .hamMenu {
+        visibility: visible;
+        cursor: pointer;
+    }
+    .title {
+        text-align: right;
+        padding-right: 10px;
+    }
+}
+
+.open {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 200px;
+    z-index: 2;
+}
+
+.open .hamMenu {
+    visibility: hidden;
+    pointer-events: none;
+}
 
 #root {
     height: 100%;
@@ -56,6 +112,23 @@ button:hover {
 }
 
 .active {
+    color: #4CAF50;
+}
+
+.closeMenu {
+    visibility: hidden;
+    z-index: 3;
+}
+
+.open .closeMenu {
+    position: absolute;
+    right: 10px;
+    font-size: 40px;
+    visibility: visible;
+}
+
+.closeMenu:hover {
+    cursor: pointer;
     color: #4CAF50;
 }
 
@@ -140,7 +213,7 @@ h1 {
   border-right: 2px solid hsl(0, 0%, 80%);
   white-space: nowrap;
     margin: 0;
-  animation: typewriter 2s steps(30) .3s 1 normal both,
+  animation: typewriter 1.5s steps(30) .3s 1 normal both,
     blinkTextCursor 750ms infinite;
 }
 

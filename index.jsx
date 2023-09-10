@@ -110,7 +110,7 @@ function AboutPage({setActive}) {
     return (
         <Page light>
             <div style={{padding: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                <div style={{fontWeight: 'bold', fontSize: '64px'}}>About Me</div>
+                <div className="title" style={{fontWeight: 'bold', fontSize: '64px'}}>About Me</div>
                 <h2 style={{textAlign: 'center', fontSize: '26px', margin: '0px 20px 20px 20px'}}>I'm Cosmo Kay, a web development enthousiast.</h2>
                 <div style={{display: 'flex', flexDirection: 'row', flex: 1}}>
                     <div style={{display: 'flex', flex: 1.5, flexDirection: 'column', alignItems: 'center', justifyContent: 'space-evenly'}}>
@@ -149,7 +149,7 @@ function ProjectsPage({setActive}) {
     return (
         <Page>
             <div style={{flex: 1, padding: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                <div style={{marginBottom: '10px', fontWeight: 'bold', fontSize: '64px'}}>My Projects</div>
+                <div className="title" style={{marginBottom: '10px', fontWeight: 'bold', fontSize: '64px'}}>My Projects</div>
                 <div className='projectContainer'>
                     <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
                         <div style={{padding: '0px 30px 30px 30px', display: 'flex', flex: 2, flexDirection: 'column', justifyContent: 'center', alignSelf: 'flex-start'}}>
@@ -226,16 +226,25 @@ function WelcomPage({setActive}) {
 }
 
 function NavigationBar({active, setActive}) {
+    const [menuActive, setMenuActive] = useState(false);
     function changePage(page) {
         let newPathname = window.location.pathname.split('/');
         newPathname[newPathname.length - 1] = page;
         history.pushState({}, '', newPathname.join('/'));
         setActive(page);
+        setMenuActive(false);
+    }
+    
+    function toggleMenu() {
+        console.log('toggle')
+        setMenuActive(!menuActive);
     }
     
     const props = {changePage, active};
     return (
-        <div style={{alignItems: 'center', flexDirection: 'column', display: 'flex', background: 'black', color: 'white', flex: 2, height: '100%'}}>
+        <div className={`navigationBar ${menuActive ? 'open' : ''}`} style={{}}>
+            <HamMenu toggleMenu={toggleMenu} />
+            <CloseMenu toggleMenu={toggleMenu} />
             <div className='profilePicture'>
                 <img
                     style={{width: '100%', borderRadius: '50%', margin: 'auto'}}
@@ -246,6 +255,22 @@ function NavigationBar({active, setActive}) {
             <NavigationButton page="resume" {...props} />
             <NavigationButton page="projects" {...props} />
             <NavigationButton page="contact" {...props} />
+        </div>
+    )
+}
+
+function CloseMenu({toggleMenu}) {
+    return (
+        <div className="closeMenu" onClick={toggleMenu}>&#xd7;</div>
+    )
+}
+
+function HamMenu({toggleMenu}) {
+    return (
+        <div className='hamMenu' onClick={toggleMenu}>
+            <div className="ham"></div>
+            <div className="ham"></div>
+            <div className="ham"></div>
         </div>
     )
 }
