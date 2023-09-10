@@ -34,8 +34,8 @@ function App() {
 
 function Copyright() {
     return (
-        <div style={{position: 'fixed', color: 'grey', right: '5px', bottom: '5px', fontSize: '9px'}}>
-            Copyright 2021 Cosmo Kay
+        <div style={{position: 'fixed', color: 'grey', right: '10px', bottom: '5px', fontSize: '9px'}}>
+            Copyright 2023 Cosmo Kay
         </div>
     )
 }
