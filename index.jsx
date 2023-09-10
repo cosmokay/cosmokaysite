@@ -20,6 +20,7 @@ function App() {
         };
     }, []);
     
+    
     return (
         <div style={{display: 'flex', flexDirection: 'row', flex: 1, padding: 0, margin: 0, height: '100%'}}>
             <NavigationBar active={activePage} setActive={setActivePage} />
