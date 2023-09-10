@@ -27,6 +27,7 @@ function App() {
             {activePage === 'home' && <WelcomPage setActive={setActivePage} />}
             {activePage === 'about' && <AboutPage />}
             {activePage === 'resume' && <ResumePage />}
+            {activePage === 'projects' && <ProjectsPage />}
         </div>
     )
 }
@@ -129,6 +130,56 @@ function AboutPage() {
                             &nbsp;&nbsp;&nbsp;
                             <img style={{width: '16px', filter: 'invert(79%) sepia(8%) saturate(2953%) hue-rotate(69deg) brightness(73%) contrast(100%)'}} src="https://cdn-icons-png.flaticon.com/512/724/724933.png" />
                         </button>
+                    </div>
+                </div>
+            </div>
+        </Page>
+    )
+}
+
+function ProjectsPage({setActive}) {
+    return (
+        <Page>
+            <div style={{flex: 1, padding: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                <div style={{marginBottom: '10px', fontWeight: 'bold', fontSize: '64px'}}>My Projects</div>
+                <div className='projectContainer'>
+                    <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
+                        <div style={{padding: '10px', display: 'flex', flex: 2, flexDirection: 'column', justifyContent: 'center'}}>
+                            <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                                <h2 style={{display: 'inline-block'}}>webEdit.com</h2>
+                                <div onClick={() => window.open('https://webedit.com')} style={{display: 'inline-block', padding: '5px'}}>
+                                    <img className='link' src="pasted_CmHfqnm422.jpg" />
+                                </div>
+                            </div>
+                            webEdit is collaboration between my mentor and me.
+                            The inital idea was spawned from issues he ran into while tutoring.
+                            There were two issues that popped up repeatedly.
+                        </div>
+                        <div className='screenshotContainer'>
+                            <img src="webEditScreenshot.png" style={{flex: 1, width: '100%'}} />
+                            <div className='hint'>
+                                *For example, this website is written on webEdit. 
+                                cosmokay.com is a custom domain hosted by Cloudflare that uses webEdit for editing and git source control. 
+                                You can see the source code (and a live updating version of my edits)&nbsp;
+                                <a href="https://webedit.com/DGDpDREtGMR9OJaCDrMGgnk3ERb2/cosmokaysite/index.jsx?run=edit" target='__blank'>here</a>.
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <ol>
+                            <li>
+                                The process of hosting a web app is not obvious. Students would struggle through it and end up frustrated. Resulting in a lot of them being discouraged before even getting to fun part!
+                            </li>
+                            <li>
+                                Parents wanted to see what their kids were learning. Due to the difficulty hosting applications, the students work would stay local on their computers, meaning parents had no access to their kid's work.
+                            </li>
+                        </ol>
+                        These issues spawned webEdit. The idea was simple enough on the surface: 
+                        Make a web based html/javascript IDE that results in a application that is actually hosted on the web.
+                        <br />
+                        <br />
+                        Seven years later and 3 versions later, webEdit boasts a huge amount of features. 
+                        I'm not sure I could list them all if I tried. :)
                     </div>
                 </div>
             </div>

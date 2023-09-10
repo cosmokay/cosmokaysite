@@ -17,11 +17,20 @@ body {
     width: 100%;
 }
 
+.projectContainer {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #4CAF50;
+    border-radius: 4px;
+    padding: 10px;
+}
+
 .page {
     display: flex; 
     flex: 8; 
     background: #0f0f0f;
     color: white;
+    overflow: auto;
 }
 .light {
     background: white;
@@ -58,12 +67,64 @@ button:hover {
     color: #4CAF50;
 }
 
+.link {
+    filter: invert(1);
+    vertical-align: bottom;
+    height: 16px;
+}
+
+.link:hover {
+    cursor: pointer;
+    filter: invert(64%) sepia(9%) saturate(2886%) hue-rotate(72deg) brightness(90%) contrast(84%);;
+}
+
+a {
+    color: #4CAf50;
+}
+
+.screenshotContainer .hint {
+    transition: .4s all;
+    opacity: 0;
+    padding: 5px; 
+}
+
+.screenshotContainer:hover .hint {
+    opacity: 1;
+}
+
+.screenshotContainer img {
+    box-shadow: 0px 0px 5px 3px #4CAF50; 
+}
+
+.screenshotContainer:hover img {
+    box-shadow: none; 
+}
+
+.screenshotContainer {
+    background: #0f0f0f;
+    transform-origin: top right;
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    font-size: 6px;
+    height: auto; 
+    transition: .4s all; /* Animation */
+}
+
+.screenshotContainer:hover {
+    transform: scale(2.5);
+    transform-origin: top right;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 3px #4CAF50; 
+}
+
 .profilePicture {
     height: auto;
     aspect-ratio: 1/1;
     border: 4px solid #4CAF50;
     border-radius: 50%;
     margin: 10%;
+    margin-bottom: 0;
 }
 h1 {
   position: relative;
