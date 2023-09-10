@@ -20,6 +20,15 @@ body {
     z-index: 2;
 }
 
+.icon {
+    font-size: 24px !important;
+    cursor: pointer;
+}
+
+.icon:hover {
+    color: #4ACF50;
+}
+
 .ham {
     width: 35px;
     height: 5px;

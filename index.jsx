@@ -27,6 +27,15 @@ function App() {
             {activePage === 'about' && <AboutPage setActive={setActivePage} />}
             {activePage === 'resume' && <ResumePage />}
             {activePage === 'projects' && <ProjectsPage />}
+            <Copyright />
+        </div>
+    )
+}
+
+function Copyright() {
+    return (
+        <div style={{position: 'fixed', color: 'grey', right: '5px', bottom: '5px', fontSize: '9px'}}>
+            Copyright 2021 Cosmo Kay
         </div>
     )
 }
@@ -250,11 +259,21 @@ function NavigationBar({active, setActive}) {
                     style={{width: '100%', borderRadius: '50%', margin: 'auto'}}
                     src="https://media.licdn.com/dms/image/D4E35AQHY2CBvah4cqQ/profile-framedphoto-shrink_400_400/0/1690470963675?e=1694844000&v=beta&t=ekLUm66bQQgrOx0IiP37ok37_O1_Qmymv6Mn8wqILYY" />
             </div>
-            <NavigationButton page="home" {...props} />
-            <NavigationButton page="about" {...props} />
-            <NavigationButton page="resume" {...props} />
-            <NavigationButton page="projects" {...props} />
-            <NavigationButton page="contact" {...props} />
+            <div style={{flex: 1, justifyContent: 'space-around', display: 'flex', flexDirection: 'column'}}>
+                <div style={{flex: 1}}>
+                    <NavigationButton page="home" {...props} />
+                    <NavigationButton page="about" {...props} />
+                    <NavigationButton page="resume" {...props} />
+                    <NavigationButton page="projects" {...props} />
+                    <NavigationButton page="contact" {...props} />
+                </div>
+                <div style={{flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                    <i class="fa fa-github icon" onClick={() => window.open('https://github.com/cosmokay', '__blank')} />
+                    &nbsp;
+                    &nbsp;
+                    <i class="fa fa-linkedin icon"  onClick={() => window.open('https://linkedin.com/in/cosmo-kay', '__blank')} />
+                </div>
+            </div>
         </div>
     )
 }
