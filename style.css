@@ -163,13 +163,14 @@ button:hover {
     color: #4CAF50;
 }
 
-.link {
+.weLink {
     filter: invert(1);
     vertical-align: bottom;
-    height: 16px;
+    margin-bottom: 15px;
+    height: 24px;
 }
 
-.link:hover {
+.weLink:hover {
     cursor: pointer;
     filter: invert(64%) sepia(9%) saturate(2886%) hue-rotate(72deg) brightness(90%) contrast(84%);;
 }
@@ -212,10 +213,11 @@ a {
 
 
 .screenshotContainer:hover {
-    transform: scale(2.5);
+    transform: scale(2.9);
     transform-origin: top right;
     cursor: pointer;
     box-shadow: 0px 0px 5px 3px #4CAF50; 
+    z-index: 3;
 }
 
 .static {

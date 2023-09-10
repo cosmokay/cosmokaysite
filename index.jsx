@@ -26,7 +26,7 @@ function App() {
             {activePage === 'home' && <WelcomPage setActive={setActivePage} />}
             {activePage === 'about' && <AboutPage setActive={setActivePage} />}
             {activePage === 'history' && <HistoryPage />}
-            {activePage === 'projects' && <ProjectsPage />}
+            {activePage === 'webedit' && <WebEditPage />}
             <Copyright />
         </div>
     )
@@ -106,12 +106,12 @@ function HistoryPage() {
 }
 
 function AboutPage({setActive}) {
-    function projectsPage(e) {
+    function webEditPage(e) {
         e.preventDefault();
         let newPathname = window.location.pathname.split('/');
-        newPathname[newPathname.length - 1] = 'projects';
+        newPathname[newPathname.length - 1] = 'webedit';
         history.pushState({}, '', newPathname.join('/'));
-        setActive('projects');
+        setActive('webedit');
     }
     function downloadResume() {
         window.open("https://drive.google.com/uc?export=download&id=1bKQs5X10XuZi3iDxDBkh3noxW3w_eYrq", '_blank');
@@ -131,7 +131,7 @@ function AboutPage({setActive}) {
                             As I search for work, I am spending my time making long needed improvements to my passion project:&nbsp; 
                             <a target='__blank' href="https://webEdit.com">webEdit.com</a>.
                             You can read more about it on the&nbsp;
-                            <a onClick={projectsPage} href='#'>projects page</a>.
+                            <a onClick={webEditPage} href='#'>webEdit page</a>.
                         </div>
                     </div>
                     <div style={{display: 'flex', flex: 1, height: '100%', flexDirection: 'column', justifyContent: 'center'}}>
@@ -154,26 +154,23 @@ function AboutPage({setActive}) {
     )
 }
 
-function ProjectsPage({setActive}) {
+function WebEditPage({setActive}) {
     return (
         <Page>
             <div style={{flex: 1, padding: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                <div className="title" style={{marginBottom: '10px', fontWeight: 'bold', fontSize: '64px'}}>My Projects</div>
+                <div className="title" style={{marginBottom: '10px', fontWeight: 'bold', fontSize: '64px'}}>
+                    webEdit.com
+                    <div onClick={() => window.open('https://webedit.com')} style={{fontSize: '64px', display: 'inline-block', padding: '5px'}}>
+                        <img className='weLink' src="pasted_CmHfqnm422.jpg" />
+                    </div>
+                </div>
                 <div className='projectContainer'>
                     <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
-                        <div style={{padding: '0px 30px 30px 30px', display: 'flex', flex: 2, flexDirection: 'column', justifyContent: 'center', alignSelf: 'flex-start'}}>
-                            <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                                <h2 style={{display: 'inline-block', marginBottom: '10px'}}>webEdit.com</h2>
-                                <div onClick={() => window.open('https://webedit.com')} style={{display: 'inline-block', padding: '5px', marginTop: '8px'}}>
-                                    <img className='link' src="pasted_CmHfqnm422.jpg" />
-                                </div>
-                            </div>
-                            <div>
-                                webEdit is a web based HTML/JavaScript IDE. 
-                                The inital idea spawned from difficulties my mentor ran into while tutoring programming students.
-                                We realized that the tools to help soften the learning curve in going from an absoute beginner to a novice are not great. 
-                                webEdit is our attempt to  provide a powerful, yet lightweight, tool that solves that problem.
-                            </div>
+                        <div style={{padding: '15px 30px 30px 30px', display: 'flex', flex: 2, flexDirection: 'column', justifyContent: 'center', alignSelf: 'flex-start'}}>
+                            webEdit is a web based HTML/JavaScript IDE. 
+                            The inital idea spawned from difficulties my mentor ran into while tutoring programming students.
+                            We realized that the tools to help soften the learning curve in going from an absoute beginner to a novice are not great. 
+                            webEdit is our attempt to  provide a powerful, yet lightweight, tool that solves that problem.
                         </div>
                         <div className='screenshotContainer'>
                             <img src="editorScreenshot.png" style={{flex: 1, width: '100%'}} />
@@ -279,7 +276,7 @@ function NavigationBar({active, setActive}) {
                     <NavigationButton page="home" {...props} />
                     <NavigationButton page="about" {...props} />
                     <NavigationButton page="history" {...props} />
-                    <NavigationButton page="projects" {...props} />
+                    <NavigationButton page="webedit" {...props} />
                     <NavigationButton page="contact" {...props} />
                 </div>
                 <div style={{flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
