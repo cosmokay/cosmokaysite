@@ -176,7 +176,7 @@ function ProjectsPage({setActive}) {
                             </div>
                         </div>
                         <div className='screenshotContainer'>
-                            <img src="webEditScreenshot.png" style={{flex: 1, width: '100%'}} />
+                            <img src="editorScreenshot.png" style={{flex: 1, width: '100%'}} />
                             <div className='hint'>
                                 This is an example of the webpage split between a editing box and an iframe that display your fully hosted website. To make it clear, this website is powered by webEdit. 
                                 "cosmokay.com" is a custom domain hosted by Cloudflare that uses webEdit for editing and git source control. 
@@ -206,6 +206,21 @@ function ProjectsPage({setActive}) {
                         <br />
                         <br />
                         Below, I'm going to highlight some of the more important features:
+                        <ul>
+                            <li>
+                                <div style={{display: 'flex', flex: 1, flexDirection: 'row', justifyContent: 'center', alignSelf: 'flex-start'}}>
+                                    <div style={{padding: '10px', display: 'flex', flex: 1, flexDirection: 'column', justifyContent: 'center', alignSelf: 'flex-start'}}>
+                                        Once logged in, you are met with a landing page that displays your most recently
+                                        edited projects and allows you to search your projects.
+                                        You can also create new projects. There are options for a blank html page, vanilla JavaScript, and ReactJS. 
+                                        And Python is coming soon!
+                                    </div>
+                                    <div className='screenshotContainer static'>
+                                        <img src="homepageScreenshot.png" style={{flex: 1, width: '100%', height: 'auto'}} />
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>

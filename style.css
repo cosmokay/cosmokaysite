@@ -15,10 +15,11 @@ body {
 .hamMenu {
     visibility: hidden;
     position: absolute;
-    left: 20px;
-    top: 30px;
+    left: 18px;
+    top: 20px;
     z-index: 2;
 }
+
 
 .icon {
     font-size: 24px !important;
@@ -182,6 +183,10 @@ a {
     box-shadow: 0px 0px 5px 3px #4CAF50; 
 }
 
+.static img {
+    box-shadow: none;
+}
+
 .screenshotContainer:hover img {
     box-shadow: none; 
 }
@@ -190,18 +195,27 @@ a {
     background: #0f0f0f;
     transform-origin: top right;
     flex: 1; 
-    display: flex;
     flex-direction: column;
     font-size: 6px;
     height: auto; 
     transition: .4s all; /* Animation */
 }
 
+
 .screenshotContainer:hover {
     transform: scale(2.5);
     transform-origin: top right;
     cursor: pointer;
     box-shadow: 0px 0px 5px 3px #4CAF50; 
+}
+
+.static {
+    transform: scale(1) !important;
+    transition: none;
+    flex: 3;
+    cursor: default;
+    box-shadow: none !important;
+
 }
 
 .profilePicture {
