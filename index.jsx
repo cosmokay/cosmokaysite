@@ -25,7 +25,7 @@ function App() {
         <div style={{display: 'flex', flexDirection: 'row', flex: 1, padding: 0, margin: 0, height: '100%'}}>
             <NavigationBar active={activePage} setActive={setActivePage} />
             {activePage === 'home' && <WelcomPage setActive={setActivePage} />}
-            {activePage === 'about' && <AboutPage />}
+            {activePage === 'about' && <AboutPage setActive={setActivePage} />}
             {activePage === 'resume' && <ResumePage />}
             {activePage === 'projects' && <ProjectsPage />}
         </div>
@@ -44,6 +44,7 @@ function ResumePage() {
     return (
         <div style={{flex: 8, background: '#0f0f0f', overflow: 'auto'}}>
             <div class="timeline">
+                <div class="resumeTitle">My History</div>
                 <div class="container left">
                     <div class="content">
                         <h2 style={{margin: 0}}>Vali Cyber</h2>
@@ -96,7 +97,14 @@ function ResumePage() {
     )
 }
 
-function AboutPage() {
+function AboutPage({setActive}) {
+    function projectsPage(e) {
+        e.preventDefault();
+        let newPathname = window.location.pathname.split('/');
+        newPathname[newPathname.length - 1] = 'projects';
+        history.pushState({}, '', newPathname.join('/'));
+        setActive('projects');
+    }
     function downloadResume() {
         window.open("https://drive.google.com/uc?export=download&id=1bKQs5X10XuZi3iDxDBkh3noxW3w_eYrq", '_blank');
     }
@@ -104,9 +112,9 @@ function AboutPage() {
         <Page light>
             <div style={{padding: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                 <div style={{fontWeight: 'bold', fontSize: '64px'}}>About Me</div>
+                <h2 style={{textAlign: 'center', fontSize: '26px', margin: '0px 20px 20px 20px'}}>I'm Cosmo Kay, a web development enthousiast.</h2>
                 <div style={{display: 'flex', flexDirection: 'row', flex: 1}}>
                     <div style={{display: 'flex', flex: 1.5, flexDirection: 'column', alignItems: 'center', justifyContent: 'space-evenly'}}>
-                        <h2 style={{textAlign: 'center', fontSize: '26px', margin: '0px 20px 0px 20px'}}>I'm Cosmo Kay, a web development enthousiast.</h2>
                         <div style={{fontSize: '18px', lineHeight: '1.5', padding: '0px 5px 20px 20px'}}>
                             I love playing games, eating delicous food, and hanging out with my dog.
                             I am a self taught full stack developer with an expertise in everything JavaScript.
@@ -114,7 +122,8 @@ function AboutPage() {
                             I am currently looking for software engineering jobs, full stack, backend, or frontend. 
                             As I search for work, I am spending my time making long needed improvements to my passion project:&nbsp; 
                             <a target='__blank' href="https://webEdit.com">webEdit.com</a>.
-                            You can read more about it on the projects page.
+                            You can read more about it on the&nbsp;
+                            <a onClick={projectsPage} href='#'>projects page</a>.
                         </div>
                     </div>
                     <div style={{display: 'flex', flex: 1, height: '100%', flexDirection: 'column', justifyContent: 'center'}}>
@@ -144,42 +153,51 @@ function ProjectsPage({setActive}) {
                 <div style={{marginBottom: '10px', fontWeight: 'bold', fontSize: '64px'}}>My Projects</div>
                 <div className='projectContainer'>
                     <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
-                        <div style={{padding: '10px', display: 'flex', flex: 2, flexDirection: 'column', justifyContent: 'center'}}>
+                        <div style={{padding: '0px 30px 30px 30px', display: 'flex', flex: 2, flexDirection: 'column', justifyContent: 'center', alignSelf: 'flex-start'}}>
                             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                                <h2 style={{display: 'inline-block'}}>webEdit.com</h2>
-                                <div onClick={() => window.open('https://webedit.com')} style={{display: 'inline-block', padding: '5px'}}>
+                                <h2 style={{display: 'inline-block', marginBottom: '10px'}}>webEdit.com</h2>
+                                <div onClick={() => window.open('https://webedit.com')} style={{display: 'inline-block', padding: '5px', marginTop: '8px'}}>
                                     <img className='link' src="pasted_CmHfqnm422.jpg" />
                                 </div>
                             </div>
-                            webEdit is collaboration between my mentor and me.
-                            The inital idea was spawned from issues he ran into while tutoring.
-                            There were two issues that popped up repeatedly.
+                            <div>
+                                webEdit is web based HTML/JavaScript IDE. 
+                                The inital idea was spawned from difficulties my mentor ran into while tutoring programming students.
+                                We realized that the tools to help soften the learning curve between being an absoute beginner and having slightly more experience are not great. 
+                                webEdit is our attempt to  provide a powerful, yet lightweight, tool that solves that problem.
+                            </div>
                         </div>
                         <div className='screenshotContainer'>
                             <img src="webEditScreenshot.png" style={{flex: 1, width: '100%'}} />
                             <div className='hint'>
-                                *For example, this website is written on webEdit. 
-                                cosmokay.com is a custom domain hosted by Cloudflare that uses webEdit for editing and git source control. 
-                                You can see the source code (and a live updating version of my edits)&nbsp;
+                                This is an example of the webpage split between a editing box and an iframe that display your fully hosted website. To make it clear, this website is powered by webEdit. 
+                                "cosmokay.com" is a custom domain hosted by Cloudflare that uses webEdit for editing and git source control. 
+                                You can see the living, updating source code&nbsp;
                                 <a href="https://webedit.com/DGDpDREtGMR9OJaCDrMGgnk3ERb2/cosmokaysite/index.jsx?run=edit" target='__blank'>here</a>.
                             </div>
                         </div>
                     </div>
                     <div>
+                        There were two specific issues that provided inspiration:
                         <ol>
                             <li>
-                                The process of hosting a web app is not obvious. Students would struggle through it and end up frustrated. Resulting in a lot of them being discouraged before even getting to fun part!
+                                The process of hosting a web app so it's available to all is not obvious. 
+                                Students might struggle through it and end up frustrated. 
+                                It resulted in a lot of them being discouraged before even getting to fun part!
                             </li>
                             <li>
-                                Parents wanted to see what their kids were learning. Due to the difficulty hosting applications, the students work would stay local on their computers, meaning parents had no access to their kid's work.
+                                Parents wanted to see what their kids were learning. 
+                                Due to the difficulty hosting applications, the students work would stay local on their computers, meaning parents had no access to their kid's work.
                             </li>
                         </ol>
                         These issues spawned webEdit. The idea was simple enough on the surface: 
-                        Make a web based html/javascript IDE that results in a application that is actually hosted on the web.
+                        Make a web based HTML/JavaScript IDE that results in an application that is actually hosted on the web.
+                        In 2017, I dove into writing webEdit and used its development to really hone my skills and improve.
+                        I learned what it meant to be a full stack developer and how to work with a userbase while iterating and adding features.
+                        Almost seven years and 3 versions later, webEdit boasts a huge amount of features and I'm not sure I could list them all if I tried. :)
                         <br />
                         <br />
-                        Seven years later and 3 versions later, webEdit boasts a huge amount of features. 
-                        I'm not sure I could list them all if I tried. :)
+                        Below, I'm going to highlight some of the more important features:
                     </div>
                 </div>
             </div>
