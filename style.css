@@ -62,6 +62,7 @@ body {
     .title {
         text-align: right;
         padding-right: 10px;
+        width: 100%;
     }
 }
 
