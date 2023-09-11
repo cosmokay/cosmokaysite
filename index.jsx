@@ -161,7 +161,7 @@ function WebEditPage({setActive}) {
         <Page>
             <div style={{flex: 1, padding: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                 <div style={{fontWeight: 'bold', fontSize: '64px'}}>
-                    <img style={{height: '60px'}} src="/logo/webEditLogoWhite.png" />
+                    <img style={{height: '60px'}} src="webEditLogoNew.png" />
                     <a href="#" target="_blank" style={{fontSize: '64px', display: 'inline-block', padding: '5px'}}>
                         <img className='weLink' src="pasted_CmHfqnm422.jpg" />
                     </a>
