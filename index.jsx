@@ -1,7 +1,7 @@
 
 // Write your React code here!
 // (Feel free to delete everything in this document.)
-const {useState, useEffect} = React;
+const {useState, useEffect, useRef} = React;
 
 function App() {
     const [activePage, setActivePage] = useState();
@@ -28,6 +28,7 @@ function App() {
             {activePage === 'about' && <AboutPage setActive={setActivePage} />}
             {activePage === 'history' && <HistoryPage />}
             {activePage === 'webedit' && <WebEditPage />}
+            {activePage === 'contact' && <ContactPage />}
             <Copyright />
         </div>
     )
@@ -119,7 +120,7 @@ function AboutPage({setActive}) {
     }
     return (
         <Page light>
-            <div style={{padding: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+            <div style={{flex: 1, padding: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                 <div className="title" style={{fontWeight: 'bold', fontSize: '64px'}}>About Me</div>
                 <h2 className="subtitle" style={{textAlign: 'center', fontSize: '26px', margin: '0px 20px 20px 20px'}}>I'm Cosmo Kay, a web development enthousiast.</h2>
                 <div style={{display: 'flex', flexDirection: 'row', flex: 1}}>
@@ -223,6 +224,72 @@ function WebEditPage({setActive}) {
                 </div>
             </div>
         </Page>
+    )
+}
+
+function ContactPage() {
+    return (
+        <Page>
+            <div style={{padding: '10px', flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%'}}>
+                <div className="title" style={{fontWeight: 'bold', fontSize: '64px'}}>Contact Me</div>
+                <div style={{display: 'flex', flex: 1, flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '100%'}}>
+                    <ContactForm />
+                    <div style={{display: 'flex', flex: 1}} />
+                    <div style={{position: 'absolute', right: 0, bottom: '10px', width: '50%'}}>
+                        <lottie-player
+                            autoplay
+                            loop
+                            mode="bounce"
+                            src="animation_lmeh3dc8.json" 
+                            style={{filter: "hue-rotate(254deg)"}}
+                        />
+                    </div>
+                </div>
+            </div>
+        </Page>
+    )
+}
+
+function ContactForm() {
+    const formRef = useRef({});
+    
+    function sendMessage(e) {
+        event.preventDefault();
+        // generate a five digit number for the contact_number variable
+        this.contact_number.value = Math.random() * 100000 | 0;
+        // these IDs from the previous steps
+        console.log(this)
+        emailjs.sendForm('cosmokay.com', 'template_626ddj1', this)
+        .then(function() {
+            console.log('SUCCESS!');
+        }, function(error) {
+            console.log('FAILED...', error);
+        });    
+    }
+    
+    useEffect(() => {
+        if (!formRef.current) return;
+        formRef.current.addEventListener('submit', sendMessage);
+        return () => formRef.current.removeEventListener('submit', sendMessage);
+    }, [formRef])
+    
+    return (
+        <div style={{flex: 1, display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', width: '100%'}}>
+            <form ref={formRef} id="contact-form" style={{padding: '30px', flex: 3, display: 'flex', flexDirection: 'column', width: '100%',}}>
+                <h2 style={{textAlign: 'center', marginBottom: '5px'}}>
+                    Send me an email:
+                </h2>
+                <input type="hidden" name="contact_number" />
+                <label>Name</label>
+                <input type="text" name="user_name" />
+                <label>Email</label>
+                <input type="email" name="user_email" />
+                <label>Message</label>
+                <textarea name="message" style={{marginBottom: '5px', resize: 'vertical'}}></textarea>
+                <input className="button" type="submit" value="Send" />
+            </form>
+            <div style={{flex: 2}} />
+        </div>
     )
 }
 

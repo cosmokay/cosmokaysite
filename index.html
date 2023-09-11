@@ -8,7 +8,14 @@
         <link rel="stylesheet" href="timeline.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
-    <body>
+    <body>    
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                // https://dashboard.emailjs.com/admin/account
+                emailjs.init('fXMSifvhjVse5xdBK');
+            })();
+        </script>
         <script src="https://unpkg.com/react@16.14.0/umd/react.development.js" crossorigin defer></script>
         <script src="https://unpkg.com/react-dom@16.14.0/umd/react-dom.development.js" crossorigin defer></script>
         <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js" defer></script>

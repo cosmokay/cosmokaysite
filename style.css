@@ -114,7 +114,22 @@ body {
     color: black;
 }
 
+.button {
+    transition: .1s all;
+    background-color: transparent; /* Green */
+    padding: 7px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 2px;
+    border: 2px solid #4CAF50;
+    cursor: pointer;
+    color: #4CAF50 !important;
+}
+
 button {
+    transition: .1s all;
     background-color: transparent; /* Green */
     padding: 7px 28px;
     text-align: center;
@@ -128,6 +143,9 @@ button {
 }
 
 button:hover {
+  box-shadow: 0 5px 15px #4CAF50;
+}
+.button:hover {
   box-shadow: 0 5px 15px #4CAF50;
 }
 
