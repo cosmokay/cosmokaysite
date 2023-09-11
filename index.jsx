@@ -252,18 +252,22 @@ function ContactPage() {
 
 function ContactForm() {
     const formRef = useRef({});
+    const [status, setStatus] = useState(0);
     
     function sendMessage(e) {
         event.preventDefault();
+        setStatus(1);
         // generate a five digit number for the contact_number variable
         this.contact_number.value = Math.random() * 100000 | 0;
         // these IDs from the previous steps
         console.log(this)
         emailjs.sendForm('cosmokay.com', 'template_626ddj1', this)
         .then(function() {
-            console.log('SUCCESS!');
+            setStatus(2);
+            formRef.current.reset();
         }, function(error) {
-            console.log('FAILED...', error);
+            setStatus(3);
+            formRef.current.reset();
         });    
     }
     
@@ -275,9 +279,9 @@ function ContactForm() {
     
     return (
         <div style={{flex: 1, display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', width: '100%'}}>
-            <form ref={formRef} id="contact-form" style={{padding: '30px', flex: 3, display: 'flex', flexDirection: 'column', width: '100%',}}>
+            <form ref={formRef} id="contact-form" style={{maxWidth: '50vw', padding: '30px', flex: 2, display: 'flex', flexDirection: 'column', width: '100%',}}>
                 <h2 style={{textAlign: 'center', marginBottom: '5px'}}>
-                    Send me an email:
+                    EMAIL ME:
                 </h2>
                 <input type="hidden" name="contact_number" />
                 <label>Name</label>
@@ -287,6 +291,11 @@ function ContactForm() {
                 <label>Message</label>
                 <textarea name="message" style={{marginBottom: '5px', resize: 'vertical'}}></textarea>
                 <input className="button" type="submit" value="Send" />
+                <div style={{textAlign: 'center'}}>
+                    {status === 1 && 'Sending...'}
+                    {status === 2 && 'Message Sent'}
+                    {status === 3 && 'Sending Failed'}
+                </div>
             </form>
             <div style={{flex: 2}} />
         </div>
