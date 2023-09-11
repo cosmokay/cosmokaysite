@@ -130,7 +130,7 @@ function AboutPage({setActive}) {
                             <br /><br />
                             I am currently looking for software engineering jobs, full stack, backend, or frontend. 
                             As I search for work, I am spending my time making long needed improvements to my passion project:&nbsp; 
-                            <a target='__blank' href="https://webEdit.com">webEdit.com</a>.
+                            <a target='_blank' href="https://webEdit.com">webEdit.com</a>.
                             You can read more about it on the&nbsp;
                             <a onClick={webEditPage} href='#'>webEdit page</a>.
                         </div>
@@ -160,10 +160,10 @@ function WebEditPage({setActive}) {
         <Page>
             <div style={{flex: 1, padding: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                 <div style={{fontWeight: 'bold', fontSize: '64px'}}>
-                    <img style={{height: '60px'}} src="/webEditLogoWhite.png" />
-                    <div onClick={() => window.open('https://webedit.com')} style={{fontSize: '64px', display: 'inline-block', padding: '5px'}}>
+                    <img style={{height: '60px'}} src="/logo/webEditLogoWhite.png" />
+                    <a href="#" target="_blank" style={{fontSize: '64px', display: 'inline-block', padding: '5px'}}>
                         <img className='weLink' src="pasted_CmHfqnm422.jpg" />
-                    </div>
+                    </a>
                 </div>
                 <div className='projectContainer'>
                     <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
@@ -179,7 +179,7 @@ function WebEditPage({setActive}) {
                                 This is an example of the webpage split between a editing box and an iframe that display your fully hosted website. To make it clear, this website is powered by webEdit. 
                                 "cosmokay.com" is a custom domain hosted by Cloudflare that uses webEdit for editing and git source control. 
                                 You can see the living, updating source code&nbsp;
-                                <a href="https://webedit.com/DGDpDREtGMR9OJaCDrMGgnk3ERb2/cosmokaysite/index.jsx?run=edit" target='__blank'>here</a>.
+                                <a href="https://webedit.com/DGDpDREtGMR9OJaCDrMGgnk3ERb2/cosmokaysite/index.jsx?run=edit" target='_blank'>here</a>.
                             </div>
                         </div>
                     </div>
@@ -281,10 +281,14 @@ function NavigationBar({active, setActive}) {
                     <NavigationButton page="contact" {...props} />
                 </div>
                 <div style={{flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                    <i class="fa fa-github icon" onClick={() => window.open('https://github.com/cosmokay', '__blank')} />
+                    <a href="https://github.com/cosmokay" target="_blank">
+                        <i class="fa fa-github icon"/>
+                    </a>
                     &nbsp;
                     &nbsp;
-                    <i class="fa fa-linkedin icon"  onClick={() => window.open('https://linkedin.com/in/cosmo-kay', '__blank')} />
+                    <a href="https://www.linkedin.com/in/cosmo-kay" target="_blank">
+                        <i class="fa fa-linkedin icon"  />
+                    </a>
                 </div>
             </div>
         </div>
