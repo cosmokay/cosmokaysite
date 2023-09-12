@@ -172,7 +172,7 @@ function WebEditPage({setActive}) {
                     <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
                         <div style={{padding: '15px 30px 30px 30px', display: 'flex', flex: 2, flexDirection: 'column', justifyContent: 'center', center: 'flex-start'}}>
                             webEdit is a web based HTML/JavaScript IDE. 
-                            The inital idea spawned from difficulties we ran into while teaching programming students.
+                            The inital idea spawned from difficulties my mentor and I ran into while teaching programming students.
                             We realized that the tools to help soften the learning curve involved in going from an absoute beginner to a novice are not great. 
                             webEdit is our attempt to provide a powerful, yet lightweight, tool that solves that problem.
                         </div>
@@ -225,7 +225,7 @@ function WebEditPage({setActive}) {
                                 webEdit is lean and mean. (The code you write is the code that the browser runs. 
                                 Projects can be moved from webEdit to traditional web servers and function without modification.)
                             </li>
-                            <li>Projects deploy as fully featured web apps.</li>
+                            <li>Projects initialize as fully featured web apps.</li>
                             <li>
                                 We've layered additonal features that are very useful 
                                 (custom domains, git integration, electron support, data proxy to circumvent cors, templates for different frameworks, etc...).
@@ -233,7 +233,7 @@ function WebEditPage({setActive}) {
                         </ol>
 
                         <br />
-                        Almost seven years and 3 versions later, webEdit has become my primary tool for any prototyping or web apps I write.
+                        Almost seven years and 3 versions later, webEdit has become my primary tool for prototyping and writing web apps.
                         Recently, I've been revisiting my old code and fixing bugs. 
                         And as new needs arise I will add functionality.
                         Check out webEdit if you are interested and please let me know what you think using the contact page.
@@ -244,10 +244,14 @@ function WebEditPage({setActive}) {
                         <br />
                         <br />
                         <br />
-                        Oh yeah...
+                        Oh yeah... one more thing...
                         
                         <br />
-                        <h3 style={{color: '#4caf50'}}>And Python is coming to webEdit.</h3>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <h2 style={{color: '#4caf50'}}>Python is coming to webEdit.</h2>
                     </div>
                 </div>
             </div>
@@ -381,8 +385,8 @@ function NavigationBar({active, setActive}) {
                     <NavigationButton page="home" {...props} />
                     <NavigationButton page="about" {...props} />
                     <NavigationButton page="history" {...props} />
-                    <div className={`navigationButton ${active === 'webedit' ? 'active' : ''}`} onClick={() => changePage('webedit')} style={{textAlign: 'center', paddingLeft: '9px', margin: '10px'}}>
-                        <img style={{height: '23px'}} src="webEditLogoNew.png" />
+                    <div className={`navigationButton ${active === 'webedit' ? 'active' : ''}`} onClick={() => changePage('webedit')} style={{textAlign: 'center'}}>
+                        <img style={{height: '24px'}} src="webEditLogoNew.png" />
                     </div>
                     <NavigationButton page="contact" {...props} />
                 </div>
