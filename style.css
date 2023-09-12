@@ -151,6 +151,7 @@ button:hover {
 
 .active {
     color: #4CAF50;
+    filter: brightness(0) saturate(100%) invert(49%) sepia(95%) saturate(292%) hue-rotate(73deg) brightness(100%) contrast(90%);
 }
 
 .closeMenu {

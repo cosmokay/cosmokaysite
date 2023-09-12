@@ -122,18 +122,20 @@ function AboutPage({setActive}) {
         <Page light>
             <div style={{flex: 1, padding: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                 <div className="title" style={{fontWeight: 'bold', fontSize: '64px'}}>About Me</div>
-                <h2 className="subtitle" style={{textAlign: 'center', fontSize: '26px', margin: '0px 20px 20px 20px'}}>I'm Cosmo Kay, a web development enthousiast.</h2>
+                <h2 className="subtitle" style={{textAlign: 'center', fontSize: '26px', margin: '0px 20px 20px 20px'}}>
+                    I'm Cosmo Kay, a web full stack developer.
+                </h2>
                 <div style={{display: 'flex', flexDirection: 'row', flex: 1}}>
                     <div style={{display: 'flex', flex: 1.5, flexDirection: 'column', alignItems: 'center', justifyContent: 'space-evenly'}}>
                         <div style={{fontSize: '18px', lineHeight: '1.5', padding: '0px 5px 20px 20px'}}>
                             I love playing games, eating delicous food, and hanging out with my dog.
                             I am a self taught full stack developer with an expertise in everything JavaScript.
                             <br /><br />
-                            I am currently looking for software engineering jobs, full stack, backend, or frontend. 
+                            I am currently looking for software engineering jobs: full stack, backend, or frontend. 
                             As I search for work, I am spending my time making long needed improvements to my passion project:&nbsp; 
                             <a target='_blank' href="https://webEdit.com">webEdit.com</a>.
-                            You can read more about it on the&nbsp;
-                            <a onClick={webEditPage} href='#'>webEdit page</a>.
+                            You can read more about webEdit&nbsp;
+                            <a onClick={webEditPage} href='#'>here</a>.
                         </div>
                     </div>
                     <div style={{display: 'flex', flex: 1, height: '100%', flexDirection: 'column', justifyContent: 'center'}}>
@@ -159,7 +161,7 @@ function AboutPage({setActive}) {
 function WebEditPage({setActive}) {
     return (
         <Page>
-            <div style={{flex: 1, padding: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+            <div style={{flex: 1, padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                 <div style={{fontWeight: 'bold', fontSize: '64px'}}>
                     <img style={{height: '60px'}} src="webEditLogoNew.png" />
                     <a href="#" target="_blank" style={{fontSize: '64px', display: 'inline-block', padding: '5px'}}>
@@ -168,11 +170,11 @@ function WebEditPage({setActive}) {
                 </div>
                 <div className='projectContainer'>
                     <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
-                        <div style={{padding: '15px 30px 30px 30px', display: 'flex', flex: 2, flexDirection: 'column', justifyContent: 'center', alignSelf: 'flex-start'}}>
+                        <div style={{padding: '15px 30px 30px 30px', display: 'flex', flex: 2, flexDirection: 'column', justifyContent: 'center', center: 'flex-start'}}>
                             webEdit is a web based HTML/JavaScript IDE. 
-                            The inital idea spawned from difficulties my mentor ran into while tutoring programming students.
-                            We realized that the tools to help soften the learning curve in going from an absoute beginner to a novice are not great. 
-                            webEdit is our attempt to  provide a powerful, yet lightweight, tool that solves that problem.
+                            The inital idea spawned from difficulties we ran into while teaching programming students.
+                            We realized that the tools to help soften the learning curve involved in going from an absoute beginner to a novice are not great. 
+                            webEdit is our attempt to provide a powerful, yet lightweight, tool that solves that problem.
                         </div>
                         <div className='screenshotContainer'>
                             <img src="editorScreenshot.png" style={{flex: 1, width: '100%'}} />
@@ -185,41 +187,65 @@ function WebEditPage({setActive}) {
                         </div>
                     </div>
                     <div>
-                        There were two specific issues that provided inspiration:
+                        While running a week long summer camp, we noticed multiple problems with the traditional approach of developing locally:
                         <ol>
                             <li>
-                                The process of hosting a web app so it's available to all is not obvious. 
-                                Students might struggle through it and end up frustrated. 
-                                It resulted in a lot of them being discouraged before even getting to fun part!
+                                Students would show up with dead laptops (or no laptop at all) which left them with no access to their previous work.
                             </li>
                             <li>
-                                Parents wanted to see what their kids were learning. 
-                                Due to the difficulty hosting applications, the students work would stay local on their computers, meaning parents had no access to their kid's work.
+                                The students can't share their progress with their parents and friends.
+                            </li>
+                            <li>
+                                Its hard for students to collaborate on code together.
                             </li>
                         </ol>
-                        These issues spawned webEdit. The idea was simple enough on the surface: 
+
+                        Obviously there are solutions to these problems, we could teach students how to spin up servers, git source code control, etc...
+                        But we only had a week and wanted to focus on programming. 
+                        
+                        <br />
+                        <br />
+                        
+                        These are the issues that spawned webEdit. The idea was simple enough on the surface: 
                         Make a web based HTML/JavaScript IDE that results in an application that is actually hosted on the web.
-                        In 2017, I dove into writing webEdit and used its development to really hone my skills and improve.
-                        I learned what it meant to be a full stack developer and how to work with a userbase while iterating and adding features.
-                        Almost seven years and 3 versions later, webEdit boasts a huge amount of features and I'm not sure I could list them all if I tried. :)
+                        In 2017, I dove into writing webEdit and used its development to learn new tools and hone my skills.
+                        We ended up with something quite powerful.
+
                         <br />
                         <br />
-                        Below, I'm going to highlight some of the more important features:
-                        <ul>
+                        
+                        Turns out weren't alone in seeing this need. There are currently a whole bunch of similar sites and
+                        each site has different strengths and weaknesses. We believe webEdit stands out:
+                        
+                        <ol>
+                            <li>webEdit is written in it itself.</li>
                             <li>
-                                <div style={{display: 'flex', flex: 1, flexDirection: 'row', justifyContent: 'center', alignSelf: 'flex-start'}}>
-                                    <div style={{padding: '10px', display: 'flex', flex: 1, flexDirection: 'column', justifyContent: 'center', alignSelf: 'flex-start'}}>
-                                        Once logged in, you are met with a landing page that displays your most recently
-                                        edited projects and allows you to search through them.
-                                        You can create new projects from this page. There are options for a blank html page, vanilla JavaScript, and ReactJS. 
-                                        And Python is coming soon!
-                                    </div>
-                                    <div className='screenshotContainer static'>
-                                        <img src="homepageScreenshot.png" style={{flex: 1, width: '100%', height: 'auto'}} />
-                                    </div>
-                                </div>
+                                webEdit is lean and mean. (The code you write is the code that the browser runs. 
+                                Projects can be moved from webEdit to tradional web servers and function without modification.)
                             </li>
-                        </ul>
+                            <li>Projects deploy as fully featured web apps.</li>
+                            <li>
+                                We've layered additonal features that are very useful 
+                                (custom domains, git integration, electron support, data proxy to circumvent cors, templates for different frameworks, etc...).
+                            </li>
+                        </ol>
+
+                        <br />
+                        Almost seven years and 3 versions later, webEdit has become my primary tool for any prototyping or web apps I write.
+                        There are a ton more features than what I listed above and as I come up with new ones I will add them.
+                        For now, I'm revisiting my old code and fixing bugs. 
+                        Check out webEdit if you are interested and please let me know what you think using the contact page.
+                        
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        Oh yeah...
+                        
+                        <br />
+                        <h3 style={{color: '#4caf50'}}>And Python is coming to webEdit.</h3>
                     </div>
                 </div>
             </div>
@@ -278,7 +304,7 @@ function ContactForm() {
     }, [formRef])
     
     return (
-        <div style={{flex: 1, display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', width: '100%'}}>
+        <div style={{zIndex: 2, flex: 1, display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', width: '100%'}}>
             <form ref={formRef} id="contact-form" style={{maxWidth: '50vw', padding: '30px', flex: 2, display: 'flex', flexDirection: 'column', width: '100%',}}>
                 <h2 style={{textAlign: 'center', marginBottom: '5px'}}>
                     EMAIL ME:
@@ -289,7 +315,7 @@ function ContactForm() {
                 <label>Email</label>
                 <input type="email" name="user_email" />
                 <label>Message</label>
-                <textarea name="message" style={{marginBottom: '5px', resize: 'vertical'}}></textarea>
+                <textarea name="message" rows={4} style={{marginBottom: '5px', resize: 'vertical'}}></textarea>
                 <input className="button" type="submit" value="Send" />
                 <div style={{textAlign: 'center'}}>
                     {status === 1 && 'Sending...'}
@@ -353,7 +379,9 @@ function NavigationBar({active, setActive}) {
                     <NavigationButton page="home" {...props} />
                     <NavigationButton page="about" {...props} />
                     <NavigationButton page="history" {...props} />
-                    <NavigationButton page="webedit" {...props} />
+                    <div className={`navigationButton ${active === 'webedit' ? 'active' : ''}`} onClick={() => changePage('webedit')} style={{textAlign: 'center', paddingLeft: '10px', margin: '10px'}}>
+                        <img style={{height: '23px'}} src="webEditLogoNew.png" />
+                    </div>
                     <NavigationButton page="contact" {...props} />
                 </div>
                 <div style={{flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
