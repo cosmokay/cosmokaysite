@@ -118,6 +118,9 @@ function AboutPage({setActive}) {
     function downloadResume() {
         window.open("https://drive.google.com/uc?export=download&id=1bKQs5X10XuZi3iDxDBkh3noxW3w_eYrq", '_blank');
     }
+    function viewResume() {
+        window.open("CosmoKayResume.pdf", '_blank');
+    }
     return (
         <Page light>
             <div style={{flex: 1, padding: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
@@ -146,6 +149,12 @@ function AboutPage({setActive}) {
                             src="https://assets10.lottiefiles.com/packages/lf20_w98qte06.json"
                             style={{width: "100%", height: 'auto', filter: "hue-rotate(254deg)"}}
                         />
+                        <button onClick={viewResume} className="light" style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                            <div>VIEW RESUME</div>
+                            &nbsp;&nbsp;
+                            <img src="pasted_kILyFZioKZ.jpg" style={{width: '16px', filter: 'invert(79%) sepia(8%) saturate(2953%) hue-rotate(160deg) brightness(100%) contrast(100%)'}} />
+                        </button>
+                        <br />
                         <button onClick={downloadResume} className="light" style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
                             <div>DOWNLOAD RESUME</div>
                             &nbsp;&nbsp;&nbsp;
