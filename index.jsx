@@ -206,7 +206,7 @@ function WebEditPage({setActive}) {
                         <br />
                         <br />
                         
-                        These are the issues that spawned webEdit. The idea was simple enough on the surface: 
+                        These are the issues that spawned webEdit. The idea was simple enough on the surface; 
                         Make a web based HTML/JavaScript IDE that results in an application that is actually hosted on the web.
                         In 2017, I dove into writing webEdit and used its development to learn new tools and hone my skills.
                         We ended up with something quite powerful.
@@ -214,14 +214,16 @@ function WebEditPage({setActive}) {
                         <br />
                         <br />
                         
-                        Turns out weren't alone in seeing this need. There are currently a whole bunch of similar sites and
-                        each site has different strengths and weaknesses. We believe webEdit stands out:
+                        Turns out we weren't alone in seeing this need. 
+                        Today, there are a lot of websites that solve this problem.
+                        Each site has their own strengths and weaknesses. 
+                        We believe webEdit stands out for the following reasons:
                         
                         <ol>
                             <li>webEdit is written in it itself.</li>
                             <li>
                                 webEdit is lean and mean. (The code you write is the code that the browser runs. 
-                                Projects can be moved from webEdit to tradional web servers and function without modification.)
+                                Projects can be moved from webEdit to traditional web servers and function without modification.)
                             </li>
                             <li>Projects deploy as fully featured web apps.</li>
                             <li>
@@ -232,8 +234,8 @@ function WebEditPage({setActive}) {
 
                         <br />
                         Almost seven years and 3 versions later, webEdit has become my primary tool for any prototyping or web apps I write.
-                        There are a ton more features than what I listed above and as I come up with new ones I will add them.
-                        For now, I'm revisiting my old code and fixing bugs. 
+                        Recently, I've been revisiting my old code and fixing bugs. 
+                        And as new needs arise I will add functionality.
                         Check out webEdit if you are interested and please let me know what you think using the contact page.
                         
                         <br />
@@ -379,7 +381,7 @@ function NavigationBar({active, setActive}) {
                     <NavigationButton page="home" {...props} />
                     <NavigationButton page="about" {...props} />
                     <NavigationButton page="history" {...props} />
-                    <div className={`navigationButton ${active === 'webedit' ? 'active' : ''}`} onClick={() => changePage('webedit')} style={{textAlign: 'center', paddingLeft: '10px', margin: '10px'}}>
+                    <div className={`navigationButton ${active === 'webedit' ? 'active' : ''}`} onClick={() => changePage('webedit')} style={{textAlign: 'center', paddingLeft: '9px', margin: '10px'}}>
                         <img style={{height: '23px'}} src="webEditLogoNew.png" />
                     </div>
                     <NavigationButton page="contact" {...props} />
