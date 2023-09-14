@@ -232,7 +232,7 @@ a {
 
 
 .screenshotContainer:hover {
-    transform: scale(2.9);
+    transform: scale(2.4);
     transform-origin: top right;
     cursor: pointer;
     box-shadow: 0px 0px 5px 3px #4CAF50; 
