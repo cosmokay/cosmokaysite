@@ -171,12 +171,12 @@ function WebEditPage({setActive}) {
     return (
         <Page>
             <div style={{flex: 1, padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                <div style={{fontWeight: 'bold', fontSize: '64px'}}>
-                    <img style={{height: '60px'}} src="webEditLogoNew.png" />
-                    <a href="https://webedit.com" target="_blank" style={{fontSize: '64px', display: 'inline-block', padding: '5px'}}>
-                        <img className='weLink' src="pasted_CmHfqnm422.jpg" />
-                    </a>
-                </div>
+                <a href="https://webedit.com" target="_blank" style={{fontSize: '64px', display: 'inline-block', padding: '5px', paddingBottom: '10px'}}>
+                    <div style={{fontWeight: 'bold', fontSize: '64px'}}>
+                        <img style={{height: '60px'}} src="webEditLogoNew.png" />
+                        <img style={{padding: '5px'}} className='weLink' src="pasted_CmHfqnm422.jpg" />
+                    </div>
+                </a>
                 <div className='projectContainer'>
                     <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
                         <div style={{padding: '15px 30px 30px 30px', display: 'flex', flex: 2, flexDirection: 'column', justifyContent: 'center', center: 'flex-start'}}>
@@ -185,7 +185,7 @@ function WebEditPage({setActive}) {
                             We realized that the tools to help soften the learning curve involved in going from an absoute beginner to a novice are not great. 
                             webEdit is our attempt to provide a powerful, yet lightweight, tool that solves that problem.
                         </div>
-                        <div className='screenshotContainer'>
+                        <div className='screenshotContainer' onClick={() => window.open("https://webedit.com/DGDpDREtGMR9OJaCDrMGgnk3ERb2/cosmokaysite/index.jsx?run=edit", '_blank')} >
                             <img src="webEditScreenshot4k.png" style={{flex: 1, width: '100%'}} />
                             <div className='hint'>
                                 This is an example of the webpage split between a editing box and an iframe that display your fully hosted website. To make it clear, this website is powered by webEdit. 
@@ -387,7 +387,8 @@ function NavigationBar({active, setActive}) {
             <div className='profilePicture'>
                 <img
                     style={{width: '100%', borderRadius: '50%', margin: 'auto'}}
-                    src="https://media.licdn.com/dms/image/D4E35AQHY2CBvah4cqQ/profile-framedphoto-shrink_400_400/0/1690470963675?e=1694844000&v=beta&t=ekLUm66bQQgrOx0IiP37ok37_O1_Qmymv6Mn8wqILYY" />
+                    src="https://media.licdn.com/dms/image/D4E35AQHY2CBvah4cqQ/profile-framedphoto-shrink_400_400/0/1690470963675?e=1694844000&v=beta&t=ekLUm66bQQgrOx0IiP37ok37_O1_Qmymv6Mn8wqILYY"
+                />
             </div>
             <div style={{flex: 1, justifyContent: 'space-around', display: 'flex', flexDirection: 'column'}}>
                 <div style={{flex: 1}}>
