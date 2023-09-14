@@ -188,10 +188,12 @@ function WebEditPage({setActive}) {
                         <div className='screenshotContainer' onClick={() => window.open("https://webedit.com/DGDpDREtGMR9OJaCDrMGgnk3ERb2/cosmokaysite/index.jsx?run=edit", '_blank')} >
                             <img src="webEditScreenshot4k.png" style={{flex: 1, width: '100%'}} />
                             <div className='hint'>
-                                This is an example of the webpage split between a editing box and an iframe that display your fully hosted website. To make it clear, this website is powered by webEdit. 
-                                "cosmokay.com" is a custom domain hosted by Cloudflare that uses webEdit for editing and git source control. 
-                                You can see the living, updating source code&nbsp;
+                                {`This is an example of a project being edited in webEdit (In this case it's this website, cosmokay.com).
+                                webEdit is split between an editing box and an iframe that displays your fully hosted website. 
+                                
+                                You can see the living, updating source code`}&nbsp;
                                 <a href="https://webedit.com/DGDpDREtGMR9OJaCDrMGgnk3ERb2/cosmokaysite/index.jsx?run=edit" target='_blank'>here</a>.
+                                (Projects are private by default and there is a option to make them public)
                             </div>
                         </div>
                     </div>
