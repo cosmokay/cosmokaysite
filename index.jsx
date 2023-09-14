@@ -186,7 +186,7 @@ function WebEditPage({setActive}) {
                             webEdit is our attempt to provide a powerful, yet lightweight, tool that solves that problem.
                         </div>
                         <div className='screenshotContainer'>
-                            <img src="editorScreenshot.png" style={{flex: 1, width: '100%'}} />
+                            <img src="webEditScreenshot4k.png" style={{flex: 1, width: '100%'}} />
                             <div className='hint'>
                                 This is an example of the webpage split between a editing box and an iframe that display your fully hosted website. To make it clear, this website is powered by webEdit. 
                                 "cosmokay.com" is a custom domain hosted by Cloudflare that uses webEdit for editing and git source control. 
