@@ -116,10 +116,10 @@ function AboutPage({setActive}) {
         setActive('webedit');
     }
     function downloadResume() {
-        window.open("https://drive.google.com/uc?export=download&id=1bKQs5X10XuZi3iDxDBkh3noxW3w_eYrq", '_blank');
+        window.open("https://drive.google.com/uc?export=download&id=1S7b6koUVi7gRjsit4oNMOj4BB1rqpL41LLp4fFIOTs4", '_blank');
     }
     function viewResume() {
-        window.open("CosmoKayResume.pdf", '_blank');
+        window.open("CosmoKayResume2.pdf", '_blank');
     }
     return (
         <Page light>
@@ -149,17 +149,20 @@ function AboutPage({setActive}) {
                             src="https://assets10.lottiefiles.com/packages/lf20_w98qte06.json"
                             style={{width: "100%", height: 'auto', filter: "hue-rotate(254deg)"}}
                         />
-                        <button onClick={viewResume} className="light" style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                            <div>VIEW RESUME</div>
-                            &nbsp;&nbsp;
-                            <img src="pasted_kILyFZioKZ.jpg" style={{width: '16px', filter: 'invert(79%) sepia(8%) saturate(2953%) hue-rotate(160deg) brightness(100%) contrast(100%)'}} />
-                        </button>
-                        <br />
-                        <button onClick={downloadResume} className="light" style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                            <div>DOWNLOAD RESUME</div>
-                            &nbsp;&nbsp;&nbsp;
-                            <img style={{width: '16px', filter: 'invert(79%) sepia(8%) saturate(2953%) hue-rotate(69deg) brightness(73%) contrast(100%)'}} src="https://cdn-icons-png.flaticon.com/512/724/724933.png" />
-                        </button>
+                        <a target="_blank" href="CosmoKayResume2.pdf" style={{textDecoration: 'none', width: '100%', marginBottom: '5px'}}>
+                            <button className="light" style={{display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%'}}>
+                                <div>VIEW RESUME</div>
+                                &nbsp;&nbsp;
+                                <img src="pasted_kILyFZioKZ.jpg" style={{width: '16px', filter: 'invert(100%) sepia(8%) saturate(2953%) hue-rotate(135deg) brightness(100%) contrast(100%)'}} />
+                            </button>
+                        </a>
+                        <a target="_blank" href="https://drive.google.com/uc?export=download&id=15vIO7K_zaToLS_W3fiEsD2aXS2SR3cv7" style={{textDecoration: 'none', widht: '100%'}}>
+                            <button className="light" style={{display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%'}}>
+                                <div>DOWNLOAD RESUME</div>
+                                &nbsp;&nbsp;
+                                <img style={{width: '16px', filter: 'invert(79%) sepia(8%) saturate(2953%) hue-rotate(69deg) brightness(73%) contrast(100%)'}} src="https://cdn-icons-png.flaticon.com/512/724/724933.png" />
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -389,7 +392,7 @@ function NavigationBar({active, setActive}) {
             <div className='profilePicture'>
                 <img
                     style={{width: '100%', borderRadius: '50%', margin: 'auto'}}
-                    src="https://media.licdn.com/dms/image/D4E35AQHY2CBvah4cqQ/profile-framedphoto-shrink_400_400/0/1690470963675?e=1694844000&v=beta&t=ekLUm66bQQgrOx0IiP37ok37_O1_Qmymv6Mn8wqILYY"
+                    src="profilePicture.jpg"
                 />
             </div>
             <div style={{flex: 1, justifyContent: 'space-around', display: 'flex', flexDirection: 'column'}}>
